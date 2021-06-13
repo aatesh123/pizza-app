@@ -2,7 +2,6 @@ body {
   font-family: "Lato", sans-serif;
   -webkit-font-smoothing: antialiased;
   color: #232323;
-  height: 400px;
 }
 
 nav li:last-child a {
@@ -19,7 +18,11 @@ nav li a:hover {
   color: #FE5F1E;
 }
 
-scetion .size {
+section.hero {
+  background: #F8F8F8;
+}
+
+.size {
   background: #F8F8F8;
 }
 
@@ -32,4 +35,16 @@ scetion .size {
   background: #FE5F1E;
   border-color: #fff;
   color: #fff;
+}
+
+.grid-containe {
+  grid-row-gap: 50px;
+}
+
+.btn-primary {
+  background: #FE5F1E;
+  transition: all 0.3s ease-in-out;
+}
+.btn-primary:hover {
+  background: #b23301;
 }

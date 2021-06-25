@@ -9,8 +9,12 @@ const mongoose=require('mongoose')
 const session=require('express-session')
 const flash=require('express-flash')
 const MongoDbStore =require('connect-mongo')
+const passport=require('passport')
+
+app.use(flash())
 //const =connectmongo(session)
 app.use(express.static('public'))
+app.use(express.urlencoded({extended : false}))
 app.use(express.json())
 //value capital when class or constuctor
 
@@ -42,17 +46,25 @@ app.use(session({
     mongoUrl: 'mongodb://localhost/pizza'
   }),
   saveUninitialized: false,
-  cookie: { maxAge: 1000 * 1 }
+  cookie: { maxAge: 1000 * 60  }
 
 
 }))
 
+const passportinit=require('./app/config/passport')
+passportinit(passport)
+app.use(passport.initialize())
+app.use(passport.session())
+//PASSport
+
+//available on fronend as well
 app.use((req,res,next)=>{
   res.locals.session=req.session
+  res.locals.user=req.user
   next()
 })
 
-app.use(flash())
+
 
 
 

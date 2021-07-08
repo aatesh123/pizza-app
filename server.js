@@ -14,6 +14,7 @@ const passport=require('passport')
 app.use(flash())
 //const =connectmongo(session)
 app.use(express.static('public'))
+//
 app.use(express.urlencoded({extended : false}))
 app.use(express.json())
 //value capital when class or constuctor
@@ -46,11 +47,12 @@ app.use(session({
     mongoUrl: 'mongodb://localhost/pizza'
   }),
   saveUninitialized: false,
-  cookie: { maxAge: 1000 * 60  }
+  cookie: { maxAge: 1000 * 60 *60 }
 
 
 }))
 
+//passport
 const passportinit=require('./app/config/passport')
 passportinit(passport)
 app.use(passport.initialize())

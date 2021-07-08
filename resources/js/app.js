@@ -1,7 +1,12 @@
 import axios from 'axios'
+import moment from 'moment'
+import {initAdmin} from './admin'
 
 const addtocart=document.querySelectorAll('.add-to-cart')
 const cartCounter=document.querySelector('#cartCounter')
+//
+const deletebutton=document.querySelector('#deletebutton') 
+//
 
 function updateCart(pizza){
   axios.post('/update-cart',pizza).then(res=>{
@@ -17,3 +22,5 @@ addtocart.forEach((btn)=>{
     updateCart(pizza)
     })
 })
+
+initAdmin()

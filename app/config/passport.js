@@ -18,6 +18,7 @@ function init(passport){
             return done(null,false,{message : 'wrong password or email'})
           })
      }))
+     //for making login using session
      passport.serializeUser((user,done)=>{
        done(null,user._id)
      })

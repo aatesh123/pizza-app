@@ -47,7 +47,7 @@ app.use(session({
     mongoUrl: 'mongodb://localhost/pizza'
   }),
   saveUninitialized: false,
-  cookie: { maxAge: 1000 * 60 *60 }
+  cookie: { maxAge: 1000 * 60*  10   }
 
 
 }))

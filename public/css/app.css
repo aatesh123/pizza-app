@@ -70,3 +70,14 @@ section.login a:hover {
 a.link {
   color: red;
 }
+
+.delete-to-cart {
+  border: 2px solid #FE5F1E;
+  color: #FE5F1E;
+  transition: all 0.3s ease-in-out;
+}
+.delete-to-cart:hover {
+  background: #FE5F1E;
+  border-color: #fff;
+  color: #fff;
+}

@@ -27,7 +27,8 @@ function authController(){
          req.flash('error',info.message)
          return res.redirect('/login')
          }
-         // return res.redirect(_getRedirectUrl(req))
+
+          return res.redirect('/')
         })
       })(req,res,next)
      },

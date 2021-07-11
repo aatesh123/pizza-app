@@ -6,6 +6,34 @@ function cartController(){
      index(req,res){
         res.render('customers/cart')
      },
+     deletee(req,res){
+         //  const cart =req.session.cart
+         //  const ke=Object.keys(cart.items)
+         //  delete req.session.cart
+         //  console.log(cart.items[req.body.items._id])
+         delete req.session.cart
+         return res.redirect('/cart')
+          
+      //  res.redirect('/cart')
+      //  return res.json({cartItems: cart.items });
+      // let cart = req.session.cart;
+      //       if (cart.totalQty > 0) {
+      //         cart.totalQty = cart.totalQty - 1;
+      //         cart.totalPrice = cart.totalPrice - req.body.price
+               
+      //         if (cart.items[req.body._id].qty === 1) {
+      //           delete cart.items[req.body._id]
+      //         } else {
+      //           cart.items[req.body._id].qty = cart.items[req.body._id].qty - 1;
+      //         }
+      //         if (cart.totalQty === 0) {
+      //           delete req.session.cart
+      //         }
+      //       }
+      //       let totalQty = cart ? cart.totalQty : 0;
+      //       console.log(cart)
+      //       return res.json({ totalQty: totalQty, cartItems: cart.items })
+     },
      update(req,res){
 
       //  const cart={

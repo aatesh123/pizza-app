@@ -14,6 +14,7 @@
        <tbody>
          <% if(orders.length)  { %>
          <% orders.forEach((order)=> { %>
+          
          <tr>
            <td class="border px-4 py-2">
               <a class="link" href="#"><%= order._id %></a>
@@ -25,11 +26,12 @@
             <%= order.phone %>
           </td>
           <td class="border px-4 py-2">
-              <%= moment(order.createdAt).format('hh:mm A') %>
+              <%= moment(order.createdAt).format("MMM Do YY") %>
           </td>
-
+<!-- moment().format('MMMM Do YYYY, h:mm:ss a') -->
 
          </tr>
+         
          <% }) %>
          <% } else { %>
            <tr>

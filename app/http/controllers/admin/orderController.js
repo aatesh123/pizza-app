@@ -1,4 +1,5 @@
 const order = require('../../../models/order')
+const moment=require('moment')
 // const Order=require('../../models/order')
 function orderController(){
   return{
@@ -10,7 +11,7 @@ function orderController(){
           //   }
           //   else
           //   {
-            res.render('admin/orders',{orders:orders})
+            res.render('admin/orders',{orders:orders,moment:moment})
             // res.render('admin/orders',{orders:orders})
             // }
        })

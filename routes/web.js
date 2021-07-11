@@ -22,6 +22,11 @@ function initRoutes(app){
   
 
   app.post('/update-cart',cartController().update)
+  //new
+   app.post('/delete-cart',cartController().deletee)
+  //new
+
+
   app.post('/register',authController().postregister)
   app.post('/login',authController().postlogin)
   app.post('/logout',authController().logout)
